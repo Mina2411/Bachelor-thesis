@@ -9,10 +9,10 @@
 ################################################################################
 
 # SYSCLK 200MHz
-set_property PACKAGE_PIN E19 [get_ports SYSCLK_P]
-set_property IOSTANDARD LVDS [get_ports SYSCLK_P]
-set_property PACKAGE_PIN E18 [get_ports SYSCLK_N]
-set_property IOSTANDARD LVDS [get_ports SYSCLK_N]
+set_property PACKAGE_PIN E19 [get_ports i_sclk_p]
+set_property IOSTANDARD LVDS [get_ports i_sclk_p]
+set_property PACKAGE_PIN E18 [get_ports i_sclk_n]
+set_property IOSTANDARD LVDS [get_ports i_sclk_n]
 
 # User Clock
 set_property PACKAGE_PIN AK34 [get_ports USER_CLOCK_P]
@@ -71,32 +71,32 @@ set_property IOSTANDARD LVCMOS18 [get_ports PMBUS_DATA_LS]
 ################################################################################
 
 # LEDs
-set_property PACKAGE_PIN AM39 [get_ports GPIO_LED_0_LS]
-set_property IOSTANDARD LVCMOS18 [get_ports GPIO_LED_0_LS]
-set_property PACKAGE_PIN AN39 [get_ports GPIO_LED_1_LS]
-set_property IOSTANDARD LVCMOS18 [get_ports GPIO_LED_1_LS]
-set_property PACKAGE_PIN AR37 [get_ports GPIO_LED_2_LS]
-set_property IOSTANDARD LVCMOS18 [get_ports GPIO_LED_2_LS]
-set_property PACKAGE_PIN AT37 [get_ports GPIO_LED_3_LS]
-set_property IOSTANDARD LVCMOS18 [get_ports GPIO_LED_3_LS]
-set_property PACKAGE_PIN AR35 [get_ports GPIO_LED_4_LS]
-set_property IOSTANDARD LVCMOS18 [get_ports GPIO_LED_4_LS]
-set_property PACKAGE_PIN AP41 [get_ports GPIO_LED_5_LS]
-set_property IOSTANDARD LVCMOS18 [get_ports GPIO_LED_5_LS]
-set_property PACKAGE_PIN AP42 [get_ports GPIO_LED_6_LS]
-set_property IOSTANDARD LVCMOS18 [get_ports GPIO_LED_6_LS]
-set_property PACKAGE_PIN AU39 [get_ports GPIO_LED_7_LS]
-set_property IOSTANDARD LVCMOS18 [get_ports GPIO_LED_7_LS]
+set_property PACKAGE_PIN AM39 [get_ports {io_gpio[4]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[4]}
+set_property PACKAGE_PIN AN39 [get_ports {io_gpio[5]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[5]}]
+set_property PACKAGE_PIN AR37 [get_ports {io_gpio[6]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[6]}]
+set_property PACKAGE_PIN AT37 [get_ports {io_gpio[7]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[7]}]
+set_property PACKAGE_PIN AR35 [get_ports {io_gpio[8]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[8]}]
+set_property PACKAGE_PIN AP41 [get_ports {io_gpio[9]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[9]}]
+set_property PACKAGE_PIN AP42 [get_ports {io_gpio[10]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[10]}]
+set_property PACKAGE_PIN AU39 [get_ports {io_gpio[11]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[11]}]
 
 # DIP Switches
-set_property PACKAGE_PIN AV30 [get_ports GPIO_DIP_SW0]
-set_property IOSTANDARD LVCMOS18 [get_ports GPIO_DIP_SW0]
-set_property PACKAGE_PIN AY33 [get_ports GPIO_DIP_SW1]
-set_property IOSTANDARD LVCMOS18 [get_ports GPIO_DIP_SW1]
-set_property PACKAGE_PIN BA31 [get_ports GPIO_DIP_SW2]
-set_property IOSTANDARD LVCMOS18 [get_ports GPIO_DIP_SW2]
-set_property PACKAGE_PIN BA32 [get_ports GPIO_DIP_SW3]
-set_property IOSTANDARD LVCMOS18 [get_ports GPIO_DIP_SW3]
+set_property PACKAGE_PIN AV30 [get_ports io_gpio[0]]
+set_property IOSTANDARD LVCMOS18 [get_ports io_gpio[0]]
+set_property PACKAGE_PIN AY33 [get_ports io_gpio[1]]
+set_property IOSTANDARD LVCMOS18 [get_ports io_gpio[1]]
+set_property PACKAGE_PIN BA31 [get_ports io_gpio[2]]
+set_property IOSTANDARD LVCMOS18 [get_ports io_gpio[2]]
+set_property PACKAGE_PIN BA32 [get_ports io_gpio[3]]
+set_property IOSTANDARD LVCMOS18 [get_ports io_gpio[3]]
 set_property PACKAGE_PIN AW30 [get_ports GPIO_DIP_SW4]
 set_property IOSTANDARD LVCMOS18 [get_ports GPIO_DIP_SW4]
 set_property PACKAGE_PIN AY30 [get_ports GPIO_DIP_SW5]
@@ -190,14 +190,16 @@ set_property IOSTANDARD LVCMOS18 [get_ports XADC_GPIO_3]
 # USB-UART Bridge (Silicon Labs CP2103GM)
 ################################################################################
 
-set_property PACKAGE_PIN AU36 [get_ports USB_UART_RX]
-set_property IOSTANDARD LVCMOS18 [get_ports USB_UART_RX]
-set_property PACKAGE_PIN AT32 [get_ports USB_UART_RTS]
-set_property IOSTANDARD LVCMOS18 [get_ports USB_UART_RTS]
-set_property PACKAGE_PIN AU33 [get_ports USB_UART_TX]
-set_property IOSTANDARD LVCMOS18 [get_ports USB_UART_TX]
-set_property PACKAGE_PIN AR34 [get_ports USB_UART_CTS]
-set_property IOSTANDARD LVCMOS18 [get_ports USB_UART_CTS]
+set_property PACKAGE_PIN AU36 [get_ports i_uart1_rd]
+set_property IOSTANDARD LVCMOS18 [get_ports i_uart1_rd
+set_property PACKAGE_PIN AT32 [get_ports o_uart1_td]
+set_property IOSTANDARD LVCMOS18 [get_ports o_uart1_td]
+#modified
+#(debug port)
+set_property PACKAGE_PIN AU33 [get_ports i_uart2_rd]
+set_property IOSTANDARD LVCMOS18 [get_ports i_uart2_rd]
+set_property PACKAGE_PIN AR34 [get_ports  o_uart2_td]
+set_property IOSTANDARD LVCMOS18 [get_ports  o_uart2_td]
 
 ################################################################################
 # USB 2.0 ULPI (SMSC USB2330) (That one mini-USB connector by the power jack)
