@@ -107,8 +107,8 @@ set_property PACKAGE_PIN BB31 [get_ports GPIO_DIP_SW7]
 set_property IOSTANDARD LVCMOS18 [get_ports GPIO_DIP_SW7]
 
 # Pushbuttons
-set_property PACKAGE_PIN AV39 [get_ports GPIO_SW_C]
-set_property IOSTANDARD LVCMOS18 [get_ports GPIO_SW_C]
+set_property PACKAGE_PIN AV39 [get_ports i_rst]
+set_property IOSTANDARD LVCMOS18 [get_ports i_rst]
 set_property PACKAGE_PIN AR40 [get_ports GPIO_SW_N]
 set_property IOSTANDARD LVCMOS18 [get_ports GPIO_SW_N]
 set_property PACKAGE_PIN AU38 [get_ports GPIO_SW_E]
@@ -168,8 +168,8 @@ set_property IOSTANDARD LVCMOS18 [get_ports IIC_MUX_RESET_B_LS]
 # XADC
 ################################################################################
 
-set_property PACKAGE_PIN AN38 [get_ports XADC_VAUX0P_R]
-set_property IOSTANDARD LVCMOS18 [get_ports XADC_VAUX0P_R]
+set_property PACKAGE_PIN AN38 [get_ports i_jtag_ntrst]
+set_property IOSTANDARD LVCMOS18 [get_ports i_jtag_ntrst]
 set_property PACKAGE_PIN AP38 [get_ports XADC_VAUX0N_R]
 set_property IOSTANDARD LVCMOS18 [get_ports XADC_VAUX0N_R]
 set_property PACKAGE_PIN AM41 [get_ports XADC_VAUX8P_R]
@@ -177,14 +177,14 @@ set_property IOSTANDARD LVCMOS18 [get_ports XADC_VAUX8P_R]
 set_property PACKAGE_PIN AM42 [get_ports XADC_VAUX8N_R]
 set_property IOSTANDARD LVCMOS18 [get_ports XADC_VAUX8N_R]
 
-set_property PACKAGE_PIN BA21 [get_ports XADC_GPIO_0]
-set_property IOSTANDARD LVCMOS18 [get_ports XADC_GPIO_0]
-set_property PACKAGE_PIN BB21 [get_ports XADC_GPIO_1]
-set_property IOSTANDARD LVCMOS18 [get_ports XADC_GPIO_1]
-set_property PACKAGE_PIN BB24 [get_ports XADC_GPIO_2]
-set_property IOSTANDARD LVCMOS18 [get_ports XADC_GPIO_2]
-set_property PACKAGE_PIN BB23 [get_ports XADC_GPIO_3]
-set_property IOSTANDARD LVCMOS18 [get_ports XADC_GPIO_3]
+set_property PACKAGE_PIN BA21 [get_ports i_jtag_tdi]
+set_property IOSTANDARD LVCMOS18 [get_ports i_jtag_tdi]
+set_property PACKAGE_PIN BB21 [get_ports  i_jtag_tck]
+set_property IOSTANDARD LVCMOS18 [get_ports  i_jtag_tck]
+set_property PACKAGE_PIN BB24 [get_ports o_jtag_tdo]
+set_property IOSTANDARD LVCMOS18 [get_ports o_jtag_tdo]
+set_property PACKAGE_PIN BB23 [get_ports i_jtag_tms]
+set_property IOSTANDARD LVCMOS18 [get_ports i_jtag_tms]
 
 ################################################################################
 # USB-UART Bridge (Silicon Labs CP2103GM)
@@ -398,8 +398,8 @@ set_property IOSTANDARD LVCMOS18 [get_ports PCIE_PERST_LS]
 # 10/100/1000 Ethernet PHY
 ################################################################################
 
-set_property PACKAGE_PIN AK33 [get_ports PHY_MDIO_LS]
-set_property IOSTANDARD LVCMOS18 [get_ports PHY_MDIO_LS]
+set_property PACKAGE_PIN AK33 [get_ports io_emdio]
+set_property IOSTANDARD LVCMOS18 [get_ports io_emdio]
 set_property PACKAGE_PIN AH31 [get_ports PHY_MDC_LS]
 set_property IOSTANDARD LVCMOS18 [get_ports PHY_MDC_LS]
 set_property PACKAGE_PIN AL31 [get_ports PHY_INT_LS]
@@ -717,8 +717,8 @@ set_property IOSTANDARD SSTL15 [get_ports VRP_39]
 
 set_property PACKAGE_PIN AJ28 [get_ports FLASH_A0]
 set_property IOSTANDARD LVCMOS18 [get_ports FLASH_A0]
-set_property PACKAGE_PIN AH28 [get_ports FLASH_A1]
-set_property IOSTANDARD LVCMOS18 [get_ports FLASH_A1]
+set_property PACKAGE_PIN AH28 [get_ports o_jtag_vref]
+set_property IOSTANDARD LVCMOS18 [get_ports o_jtag_vref]
 set_property PACKAGE_PIN AG31 [get_ports FLASH_A2]
 set_property IOSTANDARD LVCMOS18 [get_ports FLASH_A2]
 set_property PACKAGE_PIN AF30 [get_ports FLASH_A3]
