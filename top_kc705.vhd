@@ -45,6 +45,7 @@ entity top_kc705 is port
   i_sclk_n  : in std_logic;
   --! GPIO: [11:4] LEDs; [3:0] DIP switch
   io_gpio     : inout std_logic_vector(11 downto 0);
+  
   --! JTAG signals:
   i_jtag_tck : in std_logic;
   i_jtag_ntrst : in std_logic;
@@ -59,24 +60,43 @@ entity top_kc705 is port
   i_uart2_rd   : in std_logic;
   o_uart2_td   : out std_logic;
   --! Ethernet MAC PHY interface signals
-  i_gmiiclk_p : in    std_ulogic;
-  i_gmiiclk_n : in    std_ulogic;
-  o_egtx_clk  : out   std_ulogic;
-  i_etx_clk   : in    std_ulogic;
-  i_erx_clk   : in    std_ulogic;
-  i_erxd      : in    std_logic_vector(3 downto 0);
-  i_erx_dv    : in    std_ulogic;
-  i_erx_er    : in    std_ulogic;
-  i_erx_col   : in    std_ulogic;
-  i_erx_crs   : in    std_ulogic;
-  i_emdint    : in std_ulogic;
-  o_etxd      : out   std_logic_vector(3 downto 0);
-  o_etx_en    : out   std_ulogic;
-  o_etx_er    : out   std_ulogic;
-  o_emdc      : out   std_ulogic;
-  io_emdio    : inout std_logic;
-  o_erstn     : out   std_ulogic
-);
+--  i_gmiiclk_p : in    std_ulogic;
+--  i_gmiiclk_n : in    std_ulogic;
+--  o_egtx_clk  : out   std_ulogic;
+--  i_etx_clk   : in    std_ulogic;
+--  i_erx_clk   : in    std_ulogic;
+--  i_erxd      : in    std_logic_vector(3 downto 0);
+--  i_erx_dv    : in    std_ulogic;
+--  i_erx_er    : in    std_ulogic;
+--  i_erx_col   : in    std_ulogic;
+--  i_erx_crs   : in    std_ulogic;
+--  i_emdint    : in std_ulogic;
+--  o_etxd      : out   std_logic_vector(3 downto 0);
+--  o_etx_en    : out   std_ulogic;
+--  o_etx_er    : out   std_ulogic;
+--  o_emdc      : out   std_ulogic;
+--  io_emdio    : inout std_logic;
+--  o_erstn     : out   std_ulogic
+
+  --i_gmiiclk_p : in    std_ulogic;
+  --i_gmiiclk_n : in    std_ulogic;
+  --o_egtx_clk  : out   std_ulogic;
+  --i_etx_clk   : in    std_ulogic;
+  --i_erx_clk   : in    std_ulogic;
+  --i_erxd      : in    std_logic_vector(3 downto 0);
+  --i_erx_dv    : in    std_ulogic;
+  --i_erx_er    : in    std_ulogic;
+  --i_erx_col   : in    std_ulogic;
+  --i_erx_crs   : in    std_ulogic;
+  --i_emdint    : in std_ulogic;
+  --o_etxd      : out   std_logic_vector(3 downto 0);
+  --o_etx_en    : out   std_ulogic;
+  --o_etx_er    : out   std_ulogic;
+  --o_emdc      : out   std_ulogic;
+  io_emdio    : inout std_logic);
+  --o_erstn     : out   std_ulogic
+  
+
 end top_kc705;
 
 architecture arch_top_kc705 of top_kc705 is
@@ -222,7 +242,7 @@ begin
   ojvrf0 : obuf_tech generic map(CFG_PADTECH) port map (o_jtag_vref, ob_jtag_vref);
 
   igbebuf0 : igdsbuf_tech generic map (CFG_PADTECH) port map (
-            i_gmiiclk_p, i_gmiiclk_n, ib_gmiiclk);
+            '0', '0', ib_gmiiclk);
 				
   iomdio : iobuf_tech generic map(CFG_PADTECH)
 	        port map (ib_eth_mdio, io_emdio, ob_eth_mdio, ob_eth_mdio_oe);
@@ -240,7 +260,7 @@ begin
       o_lock   => open
     );
 
-  o_egtx_clk <= w_eth_gtx_clk;
+  --o_egtx_clk <= w_eth_gtx_clk;
 
   ------------------------------------
   -- @brief Internal PLL device instance.
@@ -296,24 +316,24 @@ begin
     o_otp_we => open,
     o_otp_re => open,
     --! Ethernet MAC PHY interface signals
-    i_etx_clk   => i_etx_clk,
-    i_erx_clk   => i_erx_clk,
-    i_erxd      => i_erxd,
-    i_erx_dv    => i_erx_dv,
-    i_erx_er    => i_erx_er,
-    i_erx_col   => i_erx_col,
-    i_erx_crs   => i_erx_crs,
-    i_emdint    => i_emdint,
-    o_etxd      => o_etxd,
-    o_etx_en    => o_etx_en,
-    o_etx_er    => o_etx_er,
-    o_emdc      => o_emdc,
-    i_eth_mdio => ib_eth_mdio,
-    o_eth_mdio => ob_eth_mdio,
-    o_eth_mdio_oe => ob_eth_mdio_oe,
-    i_eth_gtx_clk => w_eth_gtx_clk,
-    i_eth_gtx_clk_90 => w_eth_gtx_clk_90,
-    o_erstn     => o_erstn,
+    i_etx_clk   => '0',
+    i_erx_clk   => '0',
+    i_erxd      => "0000",
+    i_erx_dv    => '0',
+    i_erx_er    => '0',
+    i_erx_col   => '0',
+    i_erx_crs   => '0',
+    i_emdint    => '0',
+    o_etxd      => open,
+    o_etx_en    => open,
+    o_etx_er    => open,
+    o_emdc      => open,
+    i_eth_mdio => '0',
+    o_eth_mdio => open,
+    o_eth_mdio_oe => open,
+    i_eth_gtx_clk => '0',
+    i_eth_gtx_clk_90 => '0',
+    o_erstn => open,
     -- GNSS Sub-system signals:
     i_clk_adc => '0',
     i_gps_I => "00",
