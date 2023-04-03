@@ -74,7 +74,7 @@ set_property IOSTANDARD LVDS [get_ports i_sclk_n]
 
 # LEDs
 set_property PACKAGE_PIN AM39 [get_ports {io_gpio[4]}]
-set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[4]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[4]}
 set_property PACKAGE_PIN AN39 [get_ports {io_gpio[5]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[5]}]
 set_property PACKAGE_PIN AR37 [get_ports {io_gpio[6]}]
@@ -91,14 +91,14 @@ set_property PACKAGE_PIN AU39 [get_ports {io_gpio[11]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[11]}]
 
 # DIP Switches
-set_property PACKAGE_PIN AV30 [get_ports {io_gpio[0]}]
-set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[0]}]
-set_property PACKAGE_PIN AY33 [get_ports {io_gpio[1]}]
-set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[1]}]
-set_property PACKAGE_PIN BA31 [get_ports {io_gpio[2]}]
-set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[2]}]
-set_property PACKAGE_PIN BA32 [get_ports {io_gpio[3]}]
-set_property IOSTANDARD LVCMOS18 [get_ports {io_gpio[3]}]
+set_property PACKAGE_PIN AV30 [get_ports io_gpio[0]]
+set_property IOSTANDARD LVCMOS18 [get_ports io_gpio[0]]
+set_property PACKAGE_PIN AY33 [get_ports io_gpio[1]]
+set_property IOSTANDARD LVCMOS18 [get_ports io_gpio[1]]
+set_property PACKAGE_PIN BA31 [get_ports io_gpio[2]]
+set_property IOSTANDARD LVCMOS18 [get_ports io_gpio[2]]
+set_property PACKAGE_PIN BA32 [get_ports io_gpio[3]]
+set_property IOSTANDARD LVCMOS18 [get_ports io_gpio[3]]
 #set_property PACKAGE_PIN AW30 [get_ports GPIO_DIP_SW4]
 #set_property IOSTANDARD LVCMOS18 [get_ports GPIO_DIP_SW4]
 #set_property PACKAGE_PIN AY30 [get_ports GPIO_DIP_SW5]
@@ -1656,3 +1656,4 @@ set_property IOSTANDARD LVCMOS18 [get_ports i_uart2_rd]
 #NET  15N600                    LOC = G10                       ; # Bank 118                 - MGTREFCLK1P_118
 #NET  15N539                    LOC = C9                        ; # Bank 119                 - MGTREFCLK1N_119
 #NET  15N538                    LOC = C10                       ; # Bank 119                 - MGTREFCLK1P_119
+
