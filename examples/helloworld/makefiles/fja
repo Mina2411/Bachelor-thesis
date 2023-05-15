@@ -1,0 +1,5 @@
+CC=/opt/riscv32-embecosm-ubuntu2204-gcc13.1.0/bin/riscv32-unknown-elf-gcc
+CPP=/opt/riscv32-embecosm-ubuntu2204-gcc13.1.0/bin/riscv32-unknown-elf-g++
+OBJDUMP=/opt/riscv32-embecosm-ubuntu2204-gcc13.1.0/bin/riscv32-unknown-elf-objdump
+
+CFLAGS= -c -fPIC -g -O0 -march=rv32imafdc_zicsr_zifencei

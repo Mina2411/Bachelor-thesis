@@ -1,0 +1,182 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date             : Fri May 12 19:10:26 2023
+| Host             : i80node2 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command          : report_power -file kc705_top_power_routed.rpt -pb kc705_top_power_summary_routed.pb -rpx kc705_top_power_routed.rpx
+| Design           : kc705_top
+| Device           : xc7vx485tffg1761-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.680        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.433        |
+| Device Static (W)        | 0.246        |
+| Effective TJA (C/W)      | 1.1          |
+| Max Ambient (C)          | 84.2         |
+| Junction Temperature (C) | 25.8         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.087 |        6 |       --- |             --- |
+| Slice Logic              |     0.071 |   242072 |       --- |             --- |
+|   LUT as Logic           |     0.061 |    88550 |    303600 |           29.17 |
+|   LUT as Distributed RAM |     0.004 |    37808 |    130800 |           28.91 |
+|   CARRY4                 |     0.004 |     3316 |     75900 |            4.37 |
+|   Register               |     0.001 |    61779 |    607200 |           10.17 |
+|   F7/F8 Muxes            |    <0.001 |    34225 |    303600 |           11.27 |
+|   LUT as Shift Register  |    <0.001 |        2 |    130800 |           <0.01 |
+|   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
+|   Others                 |     0.000 |      981 |       --- |             --- |
+| Signals                  |     0.147 |   142954 |       --- |             --- |
+| Block RAM                |     0.017 |       20 |      1030 |            1.94 |
+| MMCM                     |     0.107 |        1 |        14 |            7.14 |
+| I/O                      |     0.004 |       29 |       700 |            4.14 |
+| Static Power             |     0.246 |          |           |                 |
+| Total                    |     0.680 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |     0.459 |       0.322 |      0.137 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.098 |       0.061 |      0.038 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTZVccl  |       1.075 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTZAVcc  |       1.075 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTZVcch  |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.1                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 2.2                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++---------------------+--------------------------------------+-----------------+
+| Clock               | Domain                               | Constraint (ns) |
++---------------------+--------------------------------------+-----------------+
+| clkfbout_clk_wiz_0  | prci0/pll0/kc705/clkfbout_clk_wiz_0  |             5.0 |
+| i_sclk_p            | i_sclk_p                             |             5.0 |
+| i_swjtag_clktck     | i_jtag_tck                           |          1000.0 |
+| o_clk_sys_clk_wiz_0 | prci0/pll0/kc705/o_clk_sys_clk_wiz_0 |            25.0 |
++---------------------+--------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------+-----------+
+| Name                   | Power (W) |
++------------------------+-----------+
+| kc705_top              |     0.433 |
+|   iclk0                |     0.004 |
+|   prci0                |     0.116 |
+|     pll0               |     0.110 |
+|       kc705            |     0.110 |
+|     pslv0              |     0.003 |
+|   soc0                 |     0.313 |
+|     boot0              |     0.012 |
+|       tech0            |     0.012 |
+|     clint0             |     0.001 |
+|     ctrl0              |     0.003 |
+|       xdef0            |     0.001 |
+|     group0             |     0.205 |
+|       dmi0             |     0.001 |
+|       l2_dis.l2dummy   |     0.003 |
+|       xslotcpu[0].cpux |     0.200 |
+|     plic0              |     0.021 |
+|       axi0             |     0.009 |
+|     spi0               |     0.008 |
+|       rxfifo           |     0.003 |
+|       txfifo           |     0.005 |
+|     sram0              |     0.060 |
+|       axi0             |     0.031 |
+|       tech0            |     0.029 |
++------------------------+-----------+
+
+

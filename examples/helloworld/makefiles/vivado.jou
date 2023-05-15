@@ -1,0 +1,54 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri May  5 19:28:50 2023
+# Process ID: 87039
+# Current directory: /home/shemin00/riscv_vhdl/examples/helloworld/makefiles
+# Command line: vivado
+# Log file: /home/shemin00/riscv_vhdl/examples/helloworld/makefiles/vivado.log
+# Journal file: /home/shemin00/riscv_vhdl/examples/helloworld/makefiles/vivado.jou
+# Running On: i80studpc08, OS: Linux, CPU Frequency: 3000.000 MHz, CPU Physical cores: 6, Host memory: 7991 MB
+#-----------------------------------------------------------
+start_gui
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7vx485t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7vx485t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/shemin00/riscv_vhdl/sv/prj/impl/kc705/output/kc705_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/shemin00/riscv_vhdl/sv/prj/impl/kc705/output/kc705_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/shemin00/riscv_vhdl/examples/loader1.bin} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/shemin00/riscv_vhdl/sv/prj/impl/kc705/output/kc705_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/shemin00/riscv_vhdl/sv/prj/impl/kc705/output/kc705_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/shemin00/riscv_vhdl/sv/prj/impl/kc705/output/kc705_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/shemin00/riscv_vhdl/sv/prj/impl/kc705/output/kc705_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]

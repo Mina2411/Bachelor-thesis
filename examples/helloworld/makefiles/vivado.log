@@ -1,0 +1,113 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri May  5 19:28:50 2023
+# Process ID: 87039
+# Current directory: /home/shemin00/riscv_vhdl/examples/helloworld/makefiles
+# Command line: vivado
+# Log file: /home/shemin00/riscv_vhdl/examples/helloworld/makefiles/vivado.log
+# Journal file: /home/shemin00/riscv_vhdl/examples/helloworld/makefiles/vivado.jou
+# Running On: i80studpc08, OS: Linux, CPU Frequency: 3000.000 MHz, CPU Physical cores: 6, Host memory: 7991 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /Software/xilinx/2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /Software/xilinx/2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /Software/xilinx/2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /Software/xilinx/2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /Software/xilinx/2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /Software/xilinx/2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /Software/xilinx/2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /Software/xilinx/2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /Software/xilinx/2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_hw_manager
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/Software/xilinx/2022.2/Vivado/2022.2/data/ip'.
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2022.2
+  **** Build date : Oct 14 2022 at 05:10:28
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2022.2.0
+  ****** Build date   : Oct 05 2022-01:25:37
+    **** Build number : 2022.2.1664925937
+      ** Copyright 2017-2023 Xilinx, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203825109A
+current_hw_device [get_hw_devices xc7vx485t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-1435] Device xc7vx485t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/shemin00/riscv_vhdl/sv/prj/impl/kc705/output/kc705_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 9242.566 ; gain = 0.000 ; free physical = 186 ; free virtual = 4693
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-1434] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-1434] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/shemin00/riscv_vhdl/sv/prj/impl/kc705/output/kc705_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 9244.566 ; gain = 0.000 ; free physical = 223 ; free virtual = 4704
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-1434] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/shemin00/riscv_vhdl/examples/loader1.bin} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+ERROR: [Labtools 27-3165] End of startup status: LOW
+ERROR: [Common 17-39] 'program_hw_devices' failed due to earlier errors.
+set_property PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/shemin00/riscv_vhdl/sv/prj/impl/kc705/output/kc705_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 9252.195 ; gain = 0.000 ; free physical = 202 ; free virtual = 4676
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-1434] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/shemin00/riscv_vhdl/sv/prj/impl/kc705/output/kc705_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 9252.195 ; gain = 0.000 ; free physical = 210 ; free virtual = 4686
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-1434] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-1434] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/shemin00/riscv_vhdl/sv/prj/impl/kc705/output/kc705_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 9252.195 ; gain = 0.000 ; free physical = 206 ; free virtual = 4679
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-1434] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/shemin00/riscv_vhdl/sv/prj/impl/kc705/output/kc705_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 9252.195 ; gain = 0.000 ; free physical = 196 ; free virtual = 4674
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-1434] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri May  5 19:42:09 2023...

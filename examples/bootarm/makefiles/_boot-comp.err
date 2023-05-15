@@ -1,0 +1,7 @@
+make[1]: Entering directory '/home/shemin00/Schreibtisch/riscv_vhdl/examples/bootarm/makefiles'
+echo arm-none-eabi-gcc -c -g -static -std=gnu99 -O0 -fno-common -fno-builtin-printf -marm -mfloat-abi=soft -mcpu=cortex-r5 -I../../common -I../src ../src/main.c -o ../makefiles/obj/main.o
+arm-none-eabi-gcc -c -g -static -std=gnu99 -O0 -fno-common -fno-builtin-printf -marm -mfloat-abi=soft -mcpu=cortex-r5 -I../../common -I../src ../src/main.c -o ../makefiles/obj/main.o
+arm-none-eabi-gcc -c -g -static -std=gnu99 -O0 -fno-common -fno-builtin-printf -marm -mfloat-abi=soft -mcpu=cortex-r5 -I../../common -I../src ../src/main.c -o ../makefiles/obj/main.o
+make[1]: arm-none-eabi-gcc: No such file or directory
+make[1]: *** [make_boot:69: main.o] Error 127
+make[1]: Leaving directory '/home/shemin00/Schreibtisch/riscv_vhdl/examples/bootarm/makefiles'

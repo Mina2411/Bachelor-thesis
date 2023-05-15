@@ -1,0 +1,7 @@
+make[1]: Entering directory '/home/shemin00/Schreibtisch/riscv_vhdl/examples/boot/makefiles'
+echo riscv64-unknown-elf-gcc -c -g -static -std=gnu99 -O0 -fno-common -fno-builtin-printf -DSYS_HZ=40000000 -march=rv64imac -mabi=lp64 -I../../common -I../src ../src/main.c -o ../linuxbuild/obj/main.o
+riscv64-unknown-elf-gcc -c -g -static -std=gnu99 -O0 -fno-common -fno-builtin-printf -DSYS_HZ=40000000 -march=rv64imac -mabi=lp64 -I../../common -I../src ../src/main.c -o ../linuxbuild/obj/main.o
+riscv64-unknown-elf-gcc -c -g -static -std=gnu99 -O0 -fno-common -fno-builtin-printf -DSYS_HZ=40000000 -march=rv64imac -mabi=lp64 -I../../common -I../src ../src/main.c -o ../linuxbuild/obj/main.o
+make[1]: riscv64-unknown-elf-gcc: No such file or directory
+make[1]: *** [make_boot:86: main.o] Error 127
+make[1]: Leaving directory '/home/shemin00/Schreibtisch/riscv_vhdl/examples/boot/makefiles'
